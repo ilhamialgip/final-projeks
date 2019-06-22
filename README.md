@@ -1,5 +1,4 @@
-Disini kami membuat aplikasi pembayaran kos kosan,tujuan aplikasinya supaya mempermudah pembayaran dan detail kosnya jika terjadi           masalah sewaktu waktu.keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebut.
-kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII.
+Disini kami membuat aplikasi pembayaran kos kosan,tujuan aplikasinya supaya mempermudah pembayaran dan detail kosnya jika terjadi           masalah sewaktu waktu.keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebut.kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII.
 
 Disini kami menggunakan algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
 
