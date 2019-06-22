@@ -7,6 +7,6 @@ Kelompok :
            
 Tool:notepad v.7.5.8 (64bit)
 
-Disini kami menggunakan algoritma chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+Disini kami menggunakan algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
 
 
