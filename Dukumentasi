@@ -1,1 +1,78 @@
+ #include<iostream>
+#include<conio.h>
+using namespace std;
+main()
+{
+            int pilihan,lama,harga, i=0;
+            string nama,no;
+			no[100];
 
+                       
+                        cout<<"===========KOS THE WISKY PARK===========\n";
+                        cout<<"Nama Pemilik Kos : ILHAMI ALGI PLIANDA\n";
+                        cout<<"Nomor telepon  : 089595677780\n";
+						cout<<"KOS BEBAS ASAP ROKOK SEDIA RUANG KHUSUS METTING\n";
+						cout<<"AYO BURUAN NGEKOS DI THE WISKY PARK\n";
+                        cout<<"========================================\n";
+                        cout<<"PEMBAYAR KOS KOSAN\n";
+                        cout<<"========================================\n";
+						cout<<"Masukkan Nama                    : ";cin>>nama;
+                        cout<<"Masukkan no telepon             : ";cin>>no;
+						for(i; (i < 100 && no[i] != '\0'); i++)
+							no[i] = no[i] + 2; //kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII	
+                        cout<<"1.KOSAN EKSLUSIF\n";
+                        cout<<"2.KOSAN EKONOMI\n";
+                        cout<<"PILIHAN KOS KOSAN YANG AKAN DI BAYAR(1-2) : ";cin>>pilihan;
+                        cout<<endl;
+                       
+                        system ("cls");
+                       
+                        switch(pilihan)
+                        {
+                                    case 1:
+                                                cout<<"1.KOSAN EKSLUSIF\n";
+                                                cout<<"fasilitas           =Kamar 7x5, Ac,Kasur,kamar mandi, Tv\n";
+                                                cout<<"Harga/bulan    = Rp.900.000\n";
+                                                cout<<"Jumlah Bulanan yang dibayar!\n\n";
+                                                cout<<"Masukan Jumlah Angka /(bulanan) : ";cin>>lama;
+                                                harga=900000*lama;
+												cout<< "Nama Pembayaran Kos: " << nama << endl;
+												cout << "\nNo Telp Encrypted: " << no << endl;
+												cout<<"========================================\n";
+												cout<<"Nomor Rekening 9923345664\n";
+												cout<<"Atas Nama KOS THE WISKY PARK\n";
+												cout<<"Terima Kasih\n";
+												cout<<"========================================\n";
+                                                cout<<"Total harga yang harus anda bayar= Rp."<<harga<<endl;
+                                                break;
+												
+                                   
+                                    case 2:
+                                                cout<<"2.KOSAN EKONOMI\n";
+                                                cout<<"Fasilitas          = Kamar 6x4, Kasur,kamar mandi, Tv\n";
+                                                cout<<"Harga/bulan    = Rp.700.000\n";
+                                                cout<<"Jumlah Bulanan yang dibayar!\n";
+                                                cout<<endl;
+                                                cout<<"Masukan Jumlah Angka /(bulanan) : ";cin>>lama;
+                                                harga=700000*lama;
+												cout<< "Pembayaran Kos: " << nama << endl;
+												cout << "\nNo Telp Encrypted: " << no << endl;
+												cout<<"========================================\n";
+												cout<<"Nomor Rekening 9923345664\n";
+												cout<<"Atas Nama KOS THE WISKY PARK\n";
+												cout<<"Terima Kasih\n";
+												cout<<"========================================\n";
+                                                cout<<"Total harga yang harus anda bayar= Rp."<<harga<<endl;
+                                                break;
+                                               
+                                 
+                                    default:
+                                                cout<<"yang anda masukkan salah!";
+                        }
+           
+                        cout<<endl;
+                        cout<<"untuk kembali ke menu awal silahkan tekan enter! ";
+                        getch();
+           
+            return 0;
+}    
