@@ -14,10 +14,11 @@ main() //default
 
                        
                         cout<<"===========KOS THE WISKY PARK===========\n";
-                        cout<<"Nama Pemilik Kos : ILHAMI ALGI PLIANDA\n";
+                        cout<<"Nama Pemilik Kos :KOS THE WISKY PARK\n";
                         cout<<"Nomor telepon  : 089595677780\n";
-						cout<<"KOS BEBAS ASAP ROKOK SEDIA RUANG KHUSUS METTING\n";
-						cout<<"AYO BURUAN NGEKOS DI THE WISKY PARK\n";
+			cout<<"KOS BEBAS ASAP ROKOK SEDIA RUANG KHUSUS METTING\n";
+			cout<<"AYO BURUAN NGEKOS DI THE WISKY PARK\n";
+			
                         cout<<"========================================\n";
                         cout<<"PEMBAYAR KOS KOSAN\n";
                         cout<<"========================================\n";
