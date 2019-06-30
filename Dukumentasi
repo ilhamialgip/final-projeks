@@ -37,7 +37,7 @@ main() //default
                         cout<<"PILIHAN KOS KOSAN YANG AKAN DI BAYAR(1-2) : ";cin>>pilihan;
                         cout<<endl;
                        
-                        system ("cls");
+                        system ("cls"); //menghapus data yang telah dijalankan tanpa harus menutup program tersebut dan membukanya kembali
                        
                         switch(pilihan)
                         {
