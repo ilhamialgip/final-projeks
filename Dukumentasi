@@ -1,5 +1,5 @@
 //membuat aplikasi pembayaran kos kosan
-//keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebu 
+//masuk ke aplikasi menggunkan nama dan nomor user jadi keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebut 
 //algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
 
 
