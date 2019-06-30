@@ -1,5 +1,10 @@
- #include<iostream>
-#include<conio.h>
+//membuat aplikasi pembayaran kos kosan
+//keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebu 
+//algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+
+
+#include<iostream> //memanggil berkas iostream sebagai standar input output operasi
+#include<conio.h> //memanggil berkas conio untuk menampilkan hasil antarmuka
 using namespace std;
 main()
 {
@@ -16,11 +21,17 @@ main()
                         cout<<"========================================\n";
                         cout<<"PEMBAYAR KOS KOSAN\n";
                         cout<<"========================================\n";
+			
+			//dekarasi variabel yang digunakan imputan nama dan nomor user
+			
 			cout<<"Masukkan Nama                    : ";cin>>nama;
                         cout<<"Masukkan no telepon             : ";cin>>no;
 			cout<<"Masukkan public key:\t";cin >> x
 			for(i; (i < 100 && no[i] != '\0'); i++)
-			no[i] = no[i] + 2; //kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII	
+			no[i] = no[i] + 2; //kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+			
+			//dekarasi variabel tambahan
+			
                         cout<<"1.KOSAN EKSLUSIF\n";
                         cout<<"2.KOSAN EKONOMI\n";
                         cout<<"PILIHAN KOS KOSAN YANG AKAN DI BAYAR(1-2) : ";cin>>pilihan;
