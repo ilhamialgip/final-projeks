@@ -1,11 +1,11 @@
 //membuat aplikasi pembayaran kos kosan
-//masuk ke aplikasi menggunkan nama dan nomor user jadi keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebut 
+//keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebu 
 //algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
 
 
 #include<iostream> //memanggil berkas iostream sebagai standar input output operasi
 #include<conio.h> //memanggil berkas conio untuk menampilkan hasil antarmuka
-using namespace std;
+using namespace std; //untuk memberitahukan kepada kompiler bahwa kita akan menggunakan semua fungsi
 main() //default
 {
             int pilihan,lama,harga, i=0;
@@ -16,9 +16,8 @@ main() //default
                         cout<<"===========KOS THE WISKY PARK===========\n";
                         cout<<"Nama Pemilik Kos :KOS THE WISKY PARK\n";
                         cout<<"Nomor telepon  : 089595677780\n";
-			cout<<"KOS BEBAS ASAP ROKOK SEDIA RUANG KHUSUS METTING\n";
-			cout<<"AYO BURUAN NGEKOS DI THE WISKY PARK\n";
-			
+						cout<<"KOS BEBAS ASAP ROKOK SEDIA RUANG KHUSUS METTING\n";
+						cout<<"AYO BURUAN NGEKOS DI THE WISKY PARK\n";
                         cout<<"========================================\n";
                         cout<<"PEMBAYAR KOS KOSAN\n";
                         cout<<"========================================\n";
@@ -38,9 +37,11 @@ main() //default
                         cout<<"PILIHAN KOS KOSAN YANG AKAN DI BAYAR(1-2) : ";cin>>pilihan;
                         cout<<endl;
                        
-                        system ("cls"); //menghapus data yang telah dijalankan tanpa harus menutup program tersebut dan membukanya kembali
+                        system ("cls"); // untuk membersikan layar pada program yang akan dijalankan sehingga program dapat menentukan 
+					saat untuk menghapus data yang dijalankan tanpa harus menutup program tersebut dan membukanya
+					kembali
                        
-                        switch(pilihan)
+                        switch(pilihan) //
                         {
                                     case 1:
                                                 cout<<"1.KOSAN EKSLUSIF\n";
