@@ -6,7 +6,7 @@
 #include<iostream> //memanggil berkas iostream sebagai standar input output operasi
 #include<conio.h> //memanggil berkas conio untuk menampilkan hasil antarmuka
 using namespace std;
-main()
+main() //default
 {
             int pilihan,lama,harga, i=0;
             string nama,no,x;
