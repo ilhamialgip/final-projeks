@@ -1,6 +1,6 @@
 Disini kami membuat aplikasi pembayaran kos kosan,tujuan aplikasinya supaya mempermudah pembayaran dan detail kosnya jika terjadi           masalah sewaktu waktu.keamanan yang kami gunakan adalah mengenkripsikan password dan nomor debit kartu pembayaran user tersebut.kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII.
 
-Disini kami menggunakan algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+Disini kami menggunakan algoritma cesar chiper dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
 
 cara kerja :A. mengenkripsi password dan nomor debit si user 
            Proses enkripsi dapat menggunakan operator aritmetik modulo setelah sebelumnya  setiap huruf transformasi kedalam angka, yaitu: A = 0, B = 1,…, Z = 25.  Proses enkripsi suatu huruf x dengan dengan pergeseran n dapat dinyatakan secara matematis
