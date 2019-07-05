@@ -1,6 +1,7 @@
 Disini kami membuat aplikasi pembayaran kos kosan,tujuan aplikasinya supaya mempermudah pembayaran dan detail kosnya jika terjadi           masalah sewaktu waktu.keamanan yang kami gunakan adalah mengenkripsikan password dan nomor debit kartu pembayaran user tersebut.kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII.
 
 Disini kami menggunakan algoritma cesar chiper dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+Inti dari algoritma kriptografi ini adalah  melakukan pergeseran terhadap semua karakter pada  plainteks dengan nilai pergeseran yang sama.
 
 cara kerja :A. mengenkripsi password dan nomor debit si user 
            Proses enkripsi dapat menggunakan operator aritmetik modulo setelah sebelumnya  setiap huruf transformasi kedalam angka, yaitu: A = 0, B = 1,…, Z = 25.  Proses enkripsi suatu huruf x dengan dengan pergeseran n dapat dinyatakan secara matematis
@@ -14,5 +15,7 @@ Anggota Kelompok :
            
 Tool:notepad v.7.5.8 (64bit)
 
-Link : https://github.com/anuragbhd/code/blob/master/C%2B%2B/caesar-cipher.cpp
-       http://vincen-it.blogspot.com/2017/08/membuat-program-sewa-kamar-sederhana.html
+
+REFERENSI
+           https://github.com/anuragbhd/code/blob/master/C%2B%2B/caesar-cipher.cpp
+           http://vincen-it.blogspot.com/2017/08/membuat-program-sewa-kamar-sederhana.html
