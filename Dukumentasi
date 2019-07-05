@@ -1,6 +1,6 @@
 //membuat aplikasi pembayaran kos kosan
 //keamanan yang kami gunakan adalah mengenkripsikan password user, password wifi kos, nomor kartu debit/password tersebu 
-//algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+//algoritma cesar chiper pada enkripsi dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
 
 
 #include<iostream> //memanggil berkas iostream sebagai standar input output operasi
