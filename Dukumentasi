@@ -1,107 +1,105 @@
- #include<iostream> //adalah input output stream header yang di gunakan sebagai standart I/O di c++
-#include<conio.h> //header yang di gunakan untuk menampilkan hasil antarmuka  kepada pengguna
-using namespace std; //untuk memberitahu kepada kompiler bahwa kita akan menggunakan semua fungsi,
-                     //class, atau file yang terdapat pada memori namespapce std.
+//membuat aplikasi pembayaran kos kosan
+//keamanan yang kami gunakan adalah mengenkripsikan nomor user tersebu 
+//algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+
+
+#include<iostream> //memanggil berkas iostream sebagai standar input output operasi
+#include<conio.h> //memanggil berkas conio untuk menampilkan hasil antarmuka
+using namespace std;
+
 main()
 {
-            int pilihan,lama,harga, i=0, j=0, k=0; //untuk mendeklarasikan variable pilihan, lama, harga, i, j, dan k
-                                                   //yang mana variable i, j, dan k memiliki value 0 atau nilai 0
-            string nama, no, telp, passk, smartacc; //untuk mendeklarasikan variable nama, no, telp, dan smartacc
-			no[100]; //untuk memberikan value/nilai pada variable no
-                  passk[100]; //untuk memberikan value/nilai pada variable passk
-                  smartacc[100]; //untuk memberikan value/nilai pada variable smartacc
+            int pilihan,lama,harga, i=0, a=0, d=0; //untuk mendeklarasikan variable pilihan, lama, harga, i, b, dan c
+                                                   //yang mana variable i, b, dan c memiliki value 0 atau nilai 0
+            string nama, no, pas, wifi, deb;
+			no[100]; 	//untuk memberikan value/nilai pada variable nomor telpon
+			pas[100]; 	//untuk memberikan value/nilai pada variable password
+			wifi[100];	//untuk memberikan value/nilai pada variable password wifi
+			deb[100]; 	//untuk memberikan value/nilai pada variable nomor debit
+
                        
-                        cout<<"===========KOST Little BOY===========\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                        cout<<"Nama Pemilik Kos : Hafiz Nur \n"; //untuk menampilkan nama pemilik kost pada terminal cmd
-                        cout<<"Nomor telepon  : 083865674591\n"; //untuk menampilkan nomor telp pemilik kost pada console/terminal cmd
-						cout<<"KOST YANG NYAMAN DAN BEBAS DARI ASAP ROKOK\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-						cout<<"Anda Belum Punya Rumah, Kost Dulu Aja!!!!\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                        cout<<"========================================\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                        cout<<"MASUKKAN DATA ANDA : \n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                        cout<<"========================================\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-				cout<<"Masukkan Nama Anda : ";cin>>nama; //untuk menampilkan teks perintah "masukkan nama" pada console/terminal cmd
-                         cout<<"Masukkan No telepon Anda : ";cin>>telp; //untuk menampilkan teks perintah "masukkan no telp" pada console/terminal cmd
-                        cout<<"Masukkan Password Pintu Anda : ";cin>>passk; //untuk menampilkan teks perintah "masukkan password pintu" pada console/terminal cmd
-                                  
-						for(j; (j < 100 && passk[j] != '\0'); j++) //algoritma perulangan for yang di gunakan untuk mengenkripsi password pintu
-						 passk[j] = passk[j] + 3; //kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
-                        
-						cout<<"Masukkan Password Smart Home Anda : ";cin>>smartacc; //untuk menampilkan teks perintah "masukkan password smart home" pada console/terminal cmd
-                                   
-						for(k; (k < 100 && smartacc[k] != '\0'); k++) //algoritma perulangan for yang di gunakan untuk mengenkripsi password smart home
-                        smartacc[k] = smartacc[k] + 3; //kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII  
+                        cout<<"===========KOS THE WISKY PARK===========\n";
+                        cout<<"Nama Pemilik Kos : WISKY\n";
+                        cout<<"Nomor telepon  : 089595677780\n";
+						cout<<"KOS BEBAS ASAP ROKOK SEDIA RUANG KHUSUS METTING\n";
+						cout<<"AYO BURUAN NGEKOS DI THE WISKY PARK\n";
+                        cout<<"========================================\n";
+                        cout<<"PEMBAYAR KOS KOSAN\n";
+                        cout<<"========================================\n";
+						
+						//dekarasi variabel yang digunakan imputan nama dan nomor user
+						
+						cout<<"Masukkan Nama                : ";cin>>nama;
+						cout<<"Masukkan No Tlpn            	: ";cin>>no;
+						
+						cout << "Password 					: ";cin>>pas;
+						for(i; (i < 100 && pas[i] != '\0'); i++)
+						pas[i] = pas[i] + 3; //kunci untuk enkripsi adalah 3 ditambah nilai ascii
+					    
+						cout<<"Masukkan password wifi	    : ";cin>>wifi;
+						for(a; (a < 100 && wifi[a] != '\0'); a++)
+						wifi[a] = wifi[a] + 3; //kunci untuk enkripsi adalah 3 ditambah nilai asci
+						
+						cout<<"Masukkan nomor debit			: ";cin >> deb;
+						for(d; (d < 100 && deb[d] != '\0'); d++)
+						deb[d] = deb[d] + 3; //kunci untuk enkripsi adalah 3 ditambah nilai asci
+						
+						//dekarasi variabel tambahan
+						
+                        cout<<"1.KOSAN EKSLUSIF\n";
+                        cout<<"2.KOSAN EKONOMI\n";
+                        cout<<"PILIHAN KOS KOSAN YANG AKAN DI BAYAR(1-2) : ";cin>>pilihan;
+                        cout<<endl;
                        
-					   cout<<"Masukkan NIK : ";cin>>no; //untuk menampilkan teks perintah "masukkan NIK" pada console/terminal cmd
-						for(i; (i < 100 && no[i] != '\0'); i++) //algoritma perulangan for yang di gunakan untuk mengenkripsi NIK
-							no[i] = no[i] + 3; //kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII	
-                       
-					   cout<<"1.KOSAN EKSLUSIF\n"; //untuk menampilkan teks option "PILIHAN JENIS KOST" pada console/terminal cmd
-                        cout<<"2.KOSAN EKONOMI\n"; //untuk menampilkan teks option "PILIHAN JENIS KOST" pada console/terminal cmd
-                        cout<<"PILIHAN KOS KOSAN YANG AKAN DI BAYAR(1-2) : ";cin>>pilihan; 
-                        //untuk menampilkan teks option "PILIHAN KOST YANG AKAN DI BAYAR" pada console/terminal cmd
-                        cout<<endl; //untuk menghentikan suatu proses yang berjalan 
-                       
-                        system ("cls"); //untuk membersihkan layar pada program yang akan dijalankan
+                        system ("cls"); //untuk mengapus layar pada program yang akan dijalankan
                        
                         switch(pilihan) //untuk pembuatan rute pada case yang akan di pilih
                         {
                                     case 1: //untuk menampilkan hasil dari pilihan pertama
-                                                cout<<"1.KOSAN EKSLUSIF\n"; //untuk menampilkan nama pilihan kost pada terminal cmd
-                                                cout<<"fasilitas           =Kamar 7x5, Ac,Kasur,kamar mandi, Tv\n"; //untuk menampilkan nama fasilitas kost pada terminal cmd
-                                                cout<<"Harga/bulan    = Rp.900.000\n"; //untuk menampilkan nama harga kost per bulan pada terminal cmd
-                                                cout<<"Jumlah Bulanan yang harus dibayar!\n\n"; //untuk menampilkan jumlah bulanan kost yg harus di bayar pada terminal cmd
-                                                cout<<"Masukan Jumlah Angka /(bulanan) : ";cin>>lama;
-                                                //untuk menampilkan teks perintah "Jumlah lama per bulan" pada console/terminal cmd
-                                                harga=900000*lama; //perintah untuk mengkalikan harga kost dengan lama penyewaan
-												cout<<"\n";  //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<<"========================================\n";  //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<< "Nama Pembayar Kos: " << nama << endl; //untuk menampilkan nama pembayar kos
-                                                                        cout << "\nNo telepon Pembayar Kost : " << telp << endl; //untuk menampilkan no telefon pembayar kost
-                                                                        cout << "\nPassword Pintu di Enkripsi : " << passk << endl; //untuk menampilkan password pintu kost
-                                                                        cout << "\nPassword Smart Home di Enkripsi : " << smartacc << endl; //untuk menampilkan password smart home 
-												cout << "\nNIK di Enkripsi : " << no << endl; //untuk menampilkan NIK yg ter enkripsi
-                                                                        cout<<"========================================\n";  //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<<"\n";  //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<<"\n";  //untuk menampilkan teks/simbol pada console/terminal cmd
-												cout<<"========================================\n";  //untuk menampilkan teks/simbol pada console/terminal cmd
-												cout<<"Nomor Rekening 9923345664\n";  //untuk menampilkan nomor rekening pemilik kost
-												cout<<"Atas Nama Kost Little BOY\n"; //untuk menampilkan nama kost
-												cout<<"Terima Kasih\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-												cout<<"========================================\n";  //untuk menampilkan teks/simbol pada console/terminal cmd    
-                                                cout<<"Total harga yang harus anda bayar= Rp."<<harga<<endl; //untuk menampilkan harga yang harus di bayar 
-                                                break; //untuk menghentikan proses perulangan  
+                                                cout<<"1.KOSAN EKSLUSIF\n";
+                                                cout<<"fasilitas           	=Kamar 7x5, Ac,Kasur,kamar mandi, Tv\n";
+                                                cout<<"Harga/bulan    		= Rp.900.000\n";
+                                                cout<<"Jumlah Bulanan yang dibayar!\n\n";
+                                                cout<<"Masukan Jumlah Angka /(bulanan) 	: ";cin>>lama;
+                                                harga=900000*lama;	
+						cout<< "Nama Pembayaran Kos		: " << nama << endl;
+					 	cout << "\nNo Telp			: " << no << endl;
+						cout << "\npassword Encrypted		: " << pas << endl;
+						cout << "\npass wifi Encrypted		: " << wifi << endl;
+						cout << "\nDebit Encrypted			: " << deb << endl;
+						cout<<"========================================\n";
+						cout<<"Nomor Rekening 9923345664\n";
+						cout<<"Atas Nama KOS THE WISKY PARK\n";
+						cout<<"Terima Kasih\n";
+						cout<<"========================================\n";
+                                                cout<<"Total harga yang harus anda bayar= Rp."<<harga<<endl;
+                                                break;
 												
                                    
-                                    case 2: //untuk menampilkan hasil dari pilihan ke dua
-                                                cout<<"2.KOSAN EKONOMI\n"; //untuk menampilkan nama pilihan kost pada terminal cmd
-                                                cout<<"Fasilitas          = Kamar 6x4, Kasur,kamar mandi, Tv\n"; //untuk menampilkan nama fasilitas kost pada terminal cmd
-                                                cout<<"Harga/bulan    = Rp.700.000\n"; //untuk menampilkan nama harga kost per bulan pada terminal cmd
-                                                cout<<"Jumlah Bulanan yang dibayar!\n"; //untuk menampilkan jumlah bulanan kost yg harus di bayar pada terminal cmd
-                                                cout<<endl; //untuk menghentikan suatu proses yang berjalan 
-                                                cout<<"Masukan Jumlah Angka /(bulanan) : ";cin>>lama;
-                                                //untuk menampilkan teks perintah "Jumlah lama per bulan" pada console/terminal cmd
+                                    case 2:
+                                                cout<<"2.KOSAN EKONOMI\n";
+                                                cout<<"Fasilitas          = Kamar 6x4, Kasur,kamar mandi, Tv\n";
+                                                cout<<"Harga/bulan    = Rp.700.000\n";
+                                                cout<<"Jumlah Bulanan yang dibayar!\n";
+                                                cout<<endl;
+                                                cout<<"Masukan Jumlah Angka /(bulanan)	: ";cin>>lama;
                                                 harga=700000*lama;
-												cout<<"\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<<"========================================\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<< "Pembayaran Kos: " << nama << endl; //untuk menampilkan nama pembayar kos
-                                                                        cout << "\nNo telepon Pembayar Kost : " << telp << endl; //untuk menampilkan no telefon pembayar kost
-                                                                        cout << "\nPassword Pintu di Enkripsi : " << passk << endl; //untuk menampilkan password pintu kost
-                                                                        cout << "\nPassword Smart Home di Enkripsi : " << smartacc << endl; //untuk menampilkan password smart home 
-												cout << "\nNIK di enkripsi: " << no << endl; //untuk menampilkan NIK yg ter enkripsi
-                                                                        cout<<"========================================\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<<"\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-                                                                        cout<<"\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-												cout<<"========================================\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-												cout<<"Nomor Rekening 9923345664\n"; //untuk menampilkan nomor rekening pemilik kost
-												cout<<"Atas Nama Kost Little BOY\n"; //untuk menampilkan nama kost
-												cout<<"Terima Kasih\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
-												cout<<"========================================\n"; //untuk menampilkan teks/simbol pada console/terminal cmd
+						cout<< "Nama Pembayaran Kos		: " << nama << endl;
+						cout << "\nNo Telp			: " << no << endl;
+						cout << "\npassword Encrypted		: " << pas << endl;
+						cout << "\npass wifi Encrypted		: " << wifi << endl;
+						cout << "\nDebit Encrypted		: " << deb << endl;
+						cout<<"========================================\n";
+						cout<<"Nomor Rekening 9923345664\n";
+						cout<<"Atas Nama KOS THE WISKY PARK\n";
+						cout<<"Terima Kasih\n";
+						cout<<"========================================\n";
                                                 cout<<"Total harga yang harus anda bayar= Rp."<<harga<<endl;
-                                                //untuk menampilkan total harga yang harus di bayar
-                                                break; //untuk menghentikan proses perulangan 
+                                                break; 
                                                
                                  
                                     default: //untuk memberi tanda default block dari code yang akan di buat jika tidak ada kecocokan pada "switch" 
+									
                                                 cout<<"yang anda masukkan salah!"; //untuk menampilkan teks pemberitahuan
                         }
            
