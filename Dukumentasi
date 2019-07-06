@@ -10,7 +10,7 @@ using namespace std; //untuk memberitahu kepada kompiler bahwa kita akan menggun
 main()
 {
             int pilihan,lama,harga, i=0, a=0, d=0; //untuk mendeklarasikan variable pilihan, lama, harga, i, b, dan c
-                                                   //yang mana variable i, a, dan b memiliki value 0 atau nilai 0
+                                                   //yang mana variable i, a, dan d memiliki value 0 atau nilai 0
             string nama, no, pas, wifi, deb; 
 			no[100]; 	//untuk memberikan value/nilai pada variable nomor telpon
 			pas[100]; 	//untuk memberikan value/nilai pada variable password
