@@ -1,0 +1,112 @@
+//membuat aplikasi pembayaran kos kosan
+//keamanan yang kami gunakan adalah mengenkripsikan password user, password wifi kos, nomor kartu debit/password tersebu 
+//algoritma cesar chiper pada enkripsi public_key dan kunci untuk enkripsi adalah 3 yang ditambahkan ke nilai ASCII
+
+#include<iostream> //memanggil berkas iostream sebagai standar input output operasi
+#include<conio.h> //memanggil berkas conio untuk menampilkan hasil antarmuka
+using namespace std; //untuk memberitahu kepada kompiler bahwa kita akan menggunakan semua fungsi,class, atau file yang terdapat pada memori namespapce std.
+
+main()
+{
+            int pilihan,lama,harga, i=0, a=0, d=0; //untuk mendeklarasikan variable pilihan, lama, harga, i, b, dan c
+                                                   //yang mana variable i, a, dan b memiliki value 0 atau nilai 0
+            string nama, no, pas, wifi, deb; 
+			no[100]; 	//untuk memberikan value/nilai pada variable nomor telpon
+			pas[100]; 	//untuk memberikan value/nilai pada variable password
+			wifi[100];	//untuk memberikan value/nilai pada variable password wifi
+			deb[100]; 	//untuk memberikan value/nilai pada variable nomor debit
+
+                       
+                        cout<<"===========KOS THE WISKY PARK===========\n"; //untuk menampilkan teks/simbol pada terminal cmd
+                        cout<<"Nama Pemilik Kos : WISKY\n";					//menampilkan nama pemilik kos di cmd
+                        cout<<"Nomor telepon  : 089595677780\n";			//menampilkan nomor telepon pemilik kos di cmd
+						cout<<"KOS BEBAS ASAP ROKOK SEDIA RUANG KHUSUS METTING\n"; //menamnilkan simbol visi misi kos console cmd
+						cout<<"AYO BURUAN NGEKOS DI THE WISKY PARK\n";      //menampilkan iklan kos di cmd
+                        cout<<"========================================\n"; //menampilkan simbol
+                        cout<<"MASUKAN DATA PEMBAYAR KOS KOSAN\n";			//tampilan simbol dicmd
+                        cout<<"========================================\n";	//menampilkan simbol
+						
+						//dekarasi variabel yang digunakan imputan nama dan nomor user
+						
+						cout<<"Masukkan Nama                : ";cin>>nama; //menampilkan masukan nama pembayaran kos di cmd/terminal
+						
+						cout<<"Masukkan No Tlpn            	: ";cin>>no;	//menampilkan masukan nomor telepon untuk bissa dihubungi
+						
+						cout << "Password 					: ";cin>>pas;	//menamnilkan masukan password user di cmd/terminal
+						for(i; (i < 100 && pas[i] != '\0'); i++) //algoritma perulangan for yang di gunakan untuk mengenkripsi password user untuk masuk ke aplikasi
+						pas[i] = pas[i] + 3; //kunci untuk enkripsi adalah 3 ditambah nilai ascii
+					    
+						cout<<"Masukkan password wifi	    : ";cin>>wifi;	//menampilkan masukan password wifi kos dicmd/terminal
+						for(a; (a < 100 && wifi[a] != '\0'); a++) 			//algoritma perulangan for yang di gunakan untuk mengenkripsi password wifi kos
+						wifi[a] = wifi[a] + 3; //kunci untuk enkripsi adalah 3 ditambah nilai asci
+						
+						cout<<"Masukkan nomor debit			: ";cin >> deb;
+						for(d; (d < 100 && deb[d] != '\0'); d++) 			//algoritma perulangan for yang di gunakan untuk mengenkripsinya nomor kartu debit
+						deb[d] = deb[d] + 3; //kunci untuk enkripsi adalah 3 ditambah nilai asci
+						
+						//dekarasi variabel tambahan
+						
+                        cout<<"1.KOSAN EKSLUSIF\n"; //untuk menampilkan teks option "PILIHAN JENIS KOST EKSLUSIF" pada console/terminal cmd
+                        cout<<"2.KOSAN EKONOMI\n"; //untuk menampilkan teks option "PILIHAN JENIS KOST EKONOMI" pada console/terminal cmd
+                        cout<<"PILIHAN KOS KOSAN YANG AKAN DI BAYAR(1-2) : ";cin>>pilihan;
+						cout<<endl; //untuk menghentikan sesuatu proses yang sedang berjalan 
+                       
+                        system ("cls"); //untuk mengapus layar pada program yang akan dijalankan
+                       
+                        switch(pilihan) //untuk pembuatan rute pada case yang akan di pilih
+                        {
+                                    case 1: //untuk menampilkan hasil dari pilihan pertama
+                                                cout<<"1.KOSAN EKSLUSIF\n";														//menampilkan pilihan kos pertama di cmd
+                                                cout<<"fasilitas           			=Kamar 7x5, Ac,Kasur,kamar mandi, Tv\n";	//menampilkan data atau fasilitas kos secara detail di cmd
+                                                cout<<"Harga/bulan    				= Rp.900.000\n";							//menampilkan data harga untuk di bayar perbulan di terminal/cmd
+                                                cout<<"Jumlah Bulanan yang dibayar!\n\n";										
+                                                cout<<"Masukan Jumlah Angka /(bulanan) : ";cin>>lama;							//menampilakan masukan data atau jumlah berapa yang harus dibayar perbulan
+                                                harga=900000*lama;																//menampilkan peroses penjumlahan berapa bulan yang harus dibayar
+												cout<<endl;																		//untuk menghentikan suatu proses yang berjalan
+												cout<< "Nama Pembayaran Kos			: " << nama << endl; 						//menampilkan nama pembayaran kos
+												cout << "\nNo Telp					: " << no << endl; 							//menampilkan nomor telpon
+												cout << "\npassword Encrypted		: " << pas << endl; 						//menampilkan password user yang telah terenkripsi
+												cout << "\npass wifi Encrypted		: " << wifi << endl; 						//menampilkan password wifi kos yang telah terenkripsi
+												cout << "\nDebit Encrypted			: " << deb << endl; 						//menampilkan nomor kartu debbit yang terenkripsi
+												cout<<"========================================\n"; 							//simbol
+												cout<<"Nomor Rekening 9923345664\n";											//menampilkan nomor rekening pemilik kos pada saat untuk melakukan transaksi pembayaran
+												cout<<"Atas Nama KOS THE WISKY PARK\n";											//mmenampilkan nama buku rekening pemilik kos 
+												cout<<"Terima Kasih\n";															//menampilkan simbol 
+												cout<<"========================================\n"; 							//simbol
+                                                cout<<"Total harga yang harus anda bayar= Rp."<<harga<<endl;					//untuk menampilkan harga yang harus di bayar 
+                                                break; 																			//untuk menghentikan proses perulangan
+												
+                                   
+                                    case 2: //untuk menampilkan hasil dari pilihan kedua
+                                                cout<<"2.KOSAN EKONOMI\n";
+                                                cout<<"Fasilitas          			= Kamar 6x4, Kasur,kamar mandi, Tv\n";
+                                                cout<<"Harga/bulan    				= Rp.700.000\n";
+                                                cout<<"Jumlah Bulanan yang dibayar!\n";
+                                                cout<<endl;
+                                                cout<<"Masukan Jumlah Angka /(bulanan) : ";cin>>lama;
+                                                harga=700000*lama;
+												cout<< "Nama Pembayaran Kos			: " << nama << endl;
+												cout << "\nNo Telp					: " << no << endl;
+												cout << "\npassword Encrypted		: " << pas << endl;
+												cout << "\npass wifi Encrypted		: " << wifi << endl;
+												cout << "\nDebit Encrypted			: " << deb << endl;
+												cout<<"========================================\n";
+												cout<<"Nomor Rekening 9923345664\n";
+												cout<<"Atas Nama KOS THE WISKY PARK\n";
+												cout<<"Terima Kasih\n";
+												cout<<"========================================\n";
+                                                cout<<"Total harga yang harus anda bayar= Rp."<<harga<<endl;
+                                                break; //untuk menghentikan proses perulangan
+                                               
+                                 
+                                    default: //untuk memberi tanda default block dari code yang akan di buat jika tidak ada kecocokan pada "switch" 
+									
+                                                cout<<"yang anda masukkan salah!"; //untuk menampilkan teks pemberitahuan
+                        }
+           
+                        cout<<endl; //untuk menghentikan suatu proses yang berjalan 
+                        cout<<"untuk keluar silahkan tekan Enter! "; //untuk menampilkan teks perintah pada console/cmd
+                        getch(); //untuk menghentikan suatu proses yang berjalan dan membaca input dari keyboard
+           
+            return 0; //untuk mengembalikan nilai tapi karena (0) program tidak akan menampilkan keluaran apapun.
+}    
